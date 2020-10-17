@@ -1,7 +1,7 @@
 Rough Notes on Trends: (Canada Overall)
 
 - Parks: Very large increases across entire sample window particularly beginning around May (except mild decrease during stricter quarantines in April)
-- Grocery/Pharmacy: Interesting sharp increase around March 13th - tied to any key dates? Otherwise, generally small decreases until mid-June and then roughly "back to normal".
+- Grocery/Pharmacy: Interesting sharp increase around March 13th (the Friday before St Patrick's Day) Otherwise, generally small decreases until mid-June and then roughly "back to normal".
 - Transit: Strong decreases ~40-60%
 - Retail/Recreation: Strong decreases ~15-50%
 - Workplaces: Strong decreases ~30-60%
@@ -9,7 +9,7 @@ Rough Notes on Trends: (Canada Overall)
 
 - Transit and Workplaces follow moderate up-and-down pattern due to weekends. Residential follows inverse of this. Parks follow similar, but more nuanced pattern as more people visit them towards the end of the week.
 
-- As noted in grocery/pharmacy, there definitely seems to be more extreme changes in certain date ranges. Probably due to holidays. For example, April 10 (Good Friday), May 18 (Victoria Day), July 1 (Canada Day), August 3 (Civic Holiday nationally - BC Day for us), September 7 (Labour Day), and October 12 (Thanksgiving) have sharp changes.
+- As noted in grocery/pharmacy, there definitely seems to be more extreme changes in certain date ranges. Probably due to holidays. For example, March 17 (St. Patrick's Day) April 10 (Good Friday), May 18 (Victoria Day), July 1 (Canada Day), August 3 (Civic Holiday nationally - BC Day for us), September 7 (Labour Day), and October 12 (Thanksgiving) have sharp changes.
 
 - Note: BC phases were.. phase 1 March 17 (Approx.) to May 18, May 19 to June 23, and June 24 onwards.
 
