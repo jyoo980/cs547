@@ -1,6 +1,6 @@
 # Mobility and COVID-19
 
-This is the holding repo for data + demos related to our group project 547.
+This is the holding repo for data + demos related to our group project for 547.
 
 ## Demos
 
