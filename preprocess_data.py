@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import scipy.stats
+import datetime as dt
+import math
 
 provincial_codes = ['CA-AB', ]
 
@@ -30,5 +33,118 @@ def main(country_region_code='CA'):
 
     print('Finished')
 
+def calculate_bayesian_surprise():
+    df = pd.read_csv('data/provincial_data.csv')
+    surprise_df = df.copy()
+    equality_mean = 0
+    equality_std = 2
+
+    canada_population = 38005238
+    province_population = {
+        'CA-ON': 14734014,
+        'CA-QC': 8574571,
+        'CA-BC': 514712,
+        'CA-AB': 4421876,
+        'CA-MB': 1379263,
+        'CA-SK': 1178681,
+        'CA-NS': 979351,
+        'CA-NB': 781476,
+        'CA-NL': 522103,
+        'CA-PE': 159625,
+        'CA-NT': 45161,
+        'CA-NU': 39353,
+        'CA-YT': 42052 
+    }
+    province_mean = {
+        'CA-ON': 0,
+        'CA-QC': 0,
+        'CA-BC': 0,
+        'CA-AB': 0,
+        'CA-MB': 0,
+        'CA-SK': 0,
+        'CA-NS': 0,
+        'CA-NB': 0,
+        'CA-NL': 0,
+        'CA-PE': 0,
+        'CA-NT': 0,
+        'CA-NU': 0,
+        'CA-YT': 0 
+    }
+    province_std = {
+        'CA-ON': province_population['CA-ON']/canada_population,
+        'CA-QC': province_population['CA-QC']/canada_population,
+        'CA-BC': province_population['CA-BC']/canada_population,
+        'CA-AB': province_population['CA-AB']/canada_population,
+        'CA-MB': province_population['CA-MB']/canada_population,
+        'CA-SK': province_population['CA-SK']/canada_population,
+        'CA-NS': province_population['CA-NS']/canada_population,
+        'CA-NB': province_population['CA-NB']/canada_population,
+        'CA-NL': province_population['CA-NL']/canada_population,
+        'CA-PE': province_population['CA-PE']/canada_population,
+        'CA-NT': province_population['CA-NT']/canada_population,
+        'CA-NU': province_population['CA-NU']/canada_population,
+        'CA-YT': province_population['CA-YT']/canada_population 
+    }
+
+    equality_prob = 0.2
+    population_prob = 0.8
+
+    categories = ['retail_and_recreation_percent_change_from_baseline', 
+    'grocery_and_pharmacy_percent_change_from_baseline',
+    'parks_percent_change_from_baseline',
+    'transit_stations_percent_change_from_baseline',
+    'workplaces_percent_change_from_baseline',
+    'residential_percent_change_from_baseline']
+
+
+    start_date = pd.to_datetime('2020-02-15')
+    end_date = pd.to_datetime('2020-10-18')
+    for index, row in df.iterrows():
+        prov = row['iso_3166_2_code']
+        date = row['date']
+        row_id = row[0]
+        mask = df['date'] == date
+        current_date_values = df.loc[mask]
+        for category in categories:
+            temp1 = row[category]
+            if not np.isnan(row[category]):
+                category_values_on_date = current_date_values[category].values
+                category_values_on_date = category_values_on_date[np.logical_not(np.isnan(category_values_on_date))]
+                category_mean_on_date = np.mean(category_values_on_date / 100)
+                category_std_on_date = np.std(category_values_on_date / 100)
+                category_value = row[category] / 100
+
+                equality_likelihood = scipy.stats.norm(category_mean_on_date, equality_std).cdf(category_value)
+                # population_likelihood = scipy.stats.norm(province_mean[prov], province_std[prov]*5).cdf(category_value)
+                population_likelihood = scipy.stats.norm(province_mean[prov], province_std[prov]*150).cdf(category_value)
+
+                equality_prob = equality_prob
+                population_prob = population_prob
+
+                data_prob = scipy.stats.norm(0, 0.75).cdf(category_value)
+
+                equality_posterior = equality_likelihood * equality_prob / data_prob
+                population_posterior = population_likelihood * population_prob / data_prob
+
+                kl_divergence = equality_posterior * np.log(equality_posterior / equality_prob) + \
+                                population_posterior * np.log(population_posterior / population_prob)
+
+                if math.isnan(kl_divergence):
+                    print('here')
+                # print(kl_divergence)
+                # print(surprise_df.iloc[index][category])
+
+                surprise_df.loc[index, category] = kl_divergence
+                # print(surprise_df.iloc[index][category])
+            else:
+                # print("i'm here")
+                hi = 'hi'
+
+    surprise_df.to_csv('province_surprise_data.csv')
+    print('done')
+
+    return  
+
 if __name__ == '__main__':
-    main()
+    # main()
+    calculate_bayesian_surprise()
