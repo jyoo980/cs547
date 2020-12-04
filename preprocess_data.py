@@ -86,8 +86,8 @@ def calculate_bayesian_surprise():
         'CA-YT': province_population['CA-YT']/canada_population 
     }
 
-    equality_prob = 0.2
-    population_prob = 0.8
+    equality_prob = 0.5
+    population_prob = 0.5
 
     categories = ['retail_and_recreation_percent_change_from_baseline', 
     'grocery_and_pharmacy_percent_change_from_baseline',
@@ -95,6 +95,50 @@ def calculate_bayesian_surprise():
     'transit_stations_percent_change_from_baseline',
     'workplaces_percent_change_from_baseline',
     'residential_percent_change_from_baseline']
+
+
+    category_std_multiplier = {
+        'retail_and_recreation_percent_change_from_baseline': 1, 
+        'grocery_and_pharmacy_percent_change_from_baseline': 1,
+        'parks_percent_change_from_baseline': 5,
+        'transit_stations_percent_change_from_baseline': 1,
+        'workplaces_percent_change_from_baseline': 1,
+        'residential_percent_change_from_baseline': 3
+    }
+
+    category_mean = {
+        'retail_and_recreation_percent_change_from_baseline': 1, 
+        'grocery_and_pharmacy_percent_change_from_baseline': 1,
+        'parks_percent_change_from_baseline': 1,
+        'transit_stations_percent_change_from_baseline': 1,
+        'workplaces_percent_change_from_baseline': 1,
+        'residential_percent_change_from_baseline': 1
+    }
+
+    category_std = {
+        'retail_and_recreation_percent_change_from_baseline': 1, 
+        'grocery_and_pharmacy_percent_change_from_baseline': 1,
+        'parks_percent_change_from_baseline': 1,
+        'transit_stations_percent_change_from_baseline': 1,
+        'workplaces_percent_change_from_baseline': 1,
+        'residential_percent_change_from_baseline': 1
+    }
+
+    for category in categories:
+        category_values = df[category].values
+        category_values = category_values[np.logical_not(np.isnan(category_values))]
+        category_min = np.min(category_values)
+        category_max = np.max(category_values)
+        modifier = (np.abs(category_max) + np.abs(category_min))
+        category_std_multiplier[category] = category_std_multiplier[category] * modifier
+
+    for category in categories:
+        category_values = df[category].values
+        category_values = category_values[np.logical_not(np.isnan(category_values))]
+        m = np.mean(category_values)
+        s = np.std(category_values)
+        category_std[category] = s
+        category_mean[category] = m
 
 
     start_date = pd.to_datetime('2020-02-15')
@@ -116,12 +160,12 @@ def calculate_bayesian_surprise():
 
                 equality_likelihood = scipy.stats.norm(category_mean_on_date, equality_std).cdf(category_value)
                 # population_likelihood = scipy.stats.norm(province_mean[prov], province_std[prov]*5).cdf(category_value)
-                population_likelihood = scipy.stats.norm(province_mean[prov], province_std[prov]*150).cdf(category_value)
+                population_likelihood = scipy.stats.norm(province_mean[prov], province_std[prov] * category_std_multiplier[category] * 10).cdf(category_value)
 
                 equality_prob = equality_prob
                 population_prob = population_prob
 
-                data_prob = scipy.stats.norm(0, 0.75).cdf(category_value)
+                data_prob = scipy.stats.norm(category_mean_on_date, category_std[category]).cdf(category_value)
 
                 equality_posterior = equality_likelihood * equality_prob / data_prob
                 population_posterior = population_likelihood * population_prob / data_prob
@@ -142,6 +186,15 @@ def calculate_bayesian_surprise():
 
     surprise_df.to_csv('province_surprise_data.csv')
     print('done')
+
+    for category in categories:
+        category_values = surprise_df[category].values
+        category_values = category_values[np.logical_not(np.isnan(category_values))]
+        category_min = np.min(category_values)
+        category_max = np.max(category_values)
+        print(category)
+        print('max', category_max)
+        print('min', category_min)
 
     return  
 
