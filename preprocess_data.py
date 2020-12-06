@@ -34,7 +34,7 @@ def main(country_region_code='CA'):
     print('Finished')
 
 def calculate_bayesian_surprise():
-    df = pd.read_csv('data/provincial_data.csv')
+    df = pd.read_csv('new_data/provincial_data.csv')
     surprise_df = df.copy()
     equality_mean = 0
     equality_std = 2
@@ -184,7 +184,7 @@ def calculate_bayesian_surprise():
                 # print("i'm here")
                 hi = 'hi'
 
-    surprise_df.to_csv('province_surprise_data.csv')
+    surprise_df.to_csv('new_data/province_surprise_data.csv')
     print('done')
 
     for category in categories:
