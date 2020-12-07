@@ -7,8 +7,8 @@
 
 	<body>
 		<h1 id="article-title">Visualizing Mobility and COVID-19</h1>
-		<h2 id="author-box">Lily Bryant, Frank Yu, James Yoo</h2>
-		<h3 id="date-box">December 6, 2020</h2>
+		<h2 id="author-box"><i>Authors:</i> Lily Bryant, Frank Yu, James Yoo</h2>
+		<h3 id="date-box">December 6, 2020</h3>
 		<img id="teaser-img" src="./media/covid-banner.jpg" alt="teaser">
 		<hr id="title-sep">
 		<p id="intro-par">
@@ -18,7 +18,7 @@
                 <div class="fbox">
                         <div> <!-- intro (add id/class later, whole width?) -->
                                 <p class="reg-par">
-                                While the pandemic is now a constant in daily life, the ways in which society has adapted its mobility is ever-changing, with factors such as seasonality and changes in public policy directly affecting movement. In this interactive explainer article, we will detail changes in mobility in Canada during the COVID-19 pandemic, with emphasis on the province of British Columbia, through a series of visualizations.  "Furthermore, we will not be visualizing or generating any data on how COVID-19 progresses in a region as we are not experts in epidemiology, and presenting data in this space would be unethical." <span class="citation">[1]</span> Instead, our visualizations and data will be centered on six different mobility categories:
+                                While the pandemic is now a constant in daily life, the ways in which society has adapted its mobility is ever-changing, with factors such as seasonality and changes in public policy directly affecting movement. In this interactive explainer article, we will detail changes in mobility in Canada during the COVID-19 pandemic, with emphasis on the province of British Columbia, through a series of visualizations.  "Furthermore, we will not be visualizing or generating any data on how COVID-19 progresses in a region as we are not experts in epidemiology, and presenting data in this space would be unethical." <span class="citation">[1]</span> Instead, our visualizations and data will be centered on the following six mobility categories:
                                         <ul>
                                                 <li>Workplaces</li>
                                                 <li>Transit Stations</li>
@@ -41,12 +41,15 @@
                         </div>
                 </div>
 
+		<hr id="title-sep">
+                <h2 class="title-sep">Overview</h2>
                 <div class="fbox">
                         <div class="fcols text-fcol">
-                                <h2 class="subtitle">Mobility Choropleth Maps</h2>
+                                <h3 class="subtitle">Choropleth Map</h3>
                                 <p class="reg-par">
                                 Our first visualization provides a choropleth map representation of Canadian mobility. From this, we can see per-day differences and similarities across every province and territory. We also provide a play button if you wish to see an animated version of this visualization. With this animated version, we can already start to see some trends emerge in the data.  If you're curious as to the exact values for a province or territory, simply hover over the region of interest and a box will tell you the exact percentage change. Regions, where there is missing data, are represented with a light grey.
                                 </p>
+                                <h3 class="subtitle">Surprise Map</h3>
                                 <p class="reg-par">
                                 While choropleth maps can show a lot of information, we should take note of their limitations. For example, what if we see a 50 percent increase above baseline in both British Columbia and Nova Scotia? Does this mean that we should view these results as equally surprising or should we be more surprised that a province with a lower population (like Nova Scotia) has the same percentage increase in mobility as a province with a larger population (British Columbia)? To answer this question, we present a Surprise Map visualization for the mobility data to show if there are any anomalies in interprovincial mobility.
                                 </p>
@@ -58,14 +61,15 @@
 		                </p>
                 </div>
                         <div class="fcols vis-col">
-                                <iframe width="100%" height="1392" frameborder="0" src="https://observablehq.com/embed/@yu-frank/test-code-for-cpsc547-project?cell=viewof+scrubber&cell=text&cell=viewof+chosen_category&cell=chart&cell=legend_works&cell=surprise_chart&cell=surprise_legend_works"></iframe>
+                                <iframe height="1392" frameborder="0" src="https://observablehq.com/embed/@yu-frank/test-code-for-cpsc547-project?cell=viewof+scrubber&cell=text&cell=viewof+chosen_category&cell=chart&cell=legend_works&cell=surprise_chart&cell=surprise_legend_works"></iframe>
                         </div>
                 </div>
 
+		<hr id="title-sep">
+                <h2 class="title-sep">Changes in our Mobility</h2>
                 <div class="fbox">
                         <div class="fcols text-fcol">
-                                <h2 class="subtitle">Changes in our Mobility</h2>
-                                <h2 class="subtitle">Transit</h2>
+                                <h3 class="subtitle">Transit</h3>
                                 <p class="reg-par">
                                 Public transit is an invaluable part of the lives of many people across Canada. In British Columbia alone, there were a total of 453 million public transit boardings in 2019. This is an increase from 363 million boardings in 2015. The designation of the busiest bus line in North America belongs to the 99-B Line <span class="citation">[3]</span>.
                 The COVID-19 pandemic has led to restrictions on workplaces and social gatherings. Naturally, people are no longer travelling at the same levels they were before the pandemic. For example:
@@ -78,13 +82,13 @@
                                 </p>
                 </div>
                         <div class="fcols vis-col">
-                                <iframe width="100%" height="851" frameborder="0" src="https://observablehq.com/embed/@jyoo980/untitled?cell=chart&cell=legend&cell=viewof+range&cell=sliderHeader&cell=viewof+ch1"></iframe>
+                                <iframe height="851" frameborder="0" src="https://observablehq.com/embed/@jyoo980/untitled?cell=chart&cell=legend&cell=viewof+range&cell=sliderHeader&cell=viewof+ch1"></iframe>
                         </div>
                 </div>
 
                 <div class="fbox">
                         <div class="fcols text-fcol">
-                                <h2 class="subtitle">Workplaces</h2>
+                                <h3 class="subtitle">Workplaces</h3>
                                 <p class="reg-par">
                                 The workplace has undergone a number of transformative changes over recent years. From cubicles to open-office concepts, the modern workplace is, for better or for worse, the place where most people spend the majority of their waking hours. With the introduction of public health measures to curb the spread of COVID-19, many workplaces have “gone virtual.” This means that many people who would otherwise be commuting to the office for work are instead telecommuting where applicable. In the visualization below, one can clearly see the sharp dropoff around mid-March when COVID-19 restrictions around Canada were introduced.
                                 </p>
@@ -94,14 +98,14 @@
                                 </p>
                 </div>
                         <div class="fcols vis-col">
-                                <iframe width="100%" height="852" frameborder="0" src="https://observablehq.com/embed/@jyoo980/changes-in-our-mobility-workplace?cell=chart&cell=legend&cell=viewof+range&cell=sliderHeader&cell=viewof+ch1"></iframe>
+                                <iframe height="852" frameborder="0" src="https://observablehq.com/embed/@jyoo980/changes-in-our-mobility-workplace?cell=chart&cell=legend&cell=viewof+range&cell=sliderHeader&cell=viewof+ch1"></iframe>
 
                         </div>
                 </div>
 
                 <div class="fbox">
                         <div class="fcols text-fcol">
-                                <h2 class="subtitle">Residential</h2>
+                                <h3 class="subtitle">Residential</h3>
                                 <p class="reg-par">
                                 With a drastic change in mobility trends related to workplaces comes an important question: where do people spend their waking hours if not at the workplace? Unfortunately, a global pandemic of a deadly virus is not conducive to travel. As a consequence, many people are now spending more time than ever at home. The visualization below illustrates how mobility trends in residential areas have changed across the course of the pandemic.
                                 </p>
@@ -110,14 +114,14 @@
                                 </p>
                 </div>
                         <div class="fcols vis-col">
-                                <iframe width="100%" height="852" frameborder="0" src="https://observablehq.com/embed/@jyoo980/changes-in-our-mobility-residential?cell=chart&cell=legend&cell=viewof+range&cell=sliderHeader&cell=viewof+ch1"></iframe>
+                                <iframe height="852" frameborder="0" src="https://observablehq.com/embed/@jyoo980/changes-in-our-mobility-residential?cell=chart&cell=legend&cell=viewof+range&cell=sliderHeader&cell=viewof+ch1"></iframe>
 
                         </div>
                 </div>
 
                 <div class="fbox">
                         <div class="fcols text-fcol">
-                                <h2 class="subtitle">Parks</h2>
+                                <h3 class="subtitle">Parks</h3>
                                 <p class="reg-par">
                                 With most citizens being predominantly homebound since the pandemic began, many are looking for activities to both socialize and remain active in a safe manner. Weather-permitting, parks and outdoor spaces have become a hotspot for meeting friends at an acceptable distance, exercising, and taking a break from the new normal of home which now often includes work, school, and leisure.
                                 </p>
@@ -128,7 +132,7 @@
                                 These patterns appear to extend to our visualization below which shows large increases in park attendance from baseline for both British Columbia and Canada overall. However, in the national view, we note that the variation is less extreme. We partially attribute this variance to the decreased viability of visiting parks in the winter in many provinces and territories in Canada due to weather. <a href="https://support.google.com/covid19-mobility/answer/9824897?hl=en&ref_topic=9822927">As noted by Google</a>, readers are reminded that park attendance will naturally increase in the warmer months, so some positive change from the baseline taken in January and February is expected.
                                 </p>
 
-                                <h2 class="subtitle">Changes in our mobility - Retail & Recreation and Grocery & Pharmacy</h2>
+                                <h3 class="subtitle">Changes in our mobility - Retail & Recreation and Grocery & Pharmacy</h3>
                                 <p class="reg-par">
                                 Due to lockdown measures and general safety concerns, retail industries have seen a significant change in traffic during the pandemic. With most people spending more of their time at home, e-commerce, socially-distanced curbside pick-up, and local delivery have become immensely popular in comparison to standard storefronts. Many retail chains which rely on physical stores have gone bankrupt or converted to online-only storefronts in record numbers <span class="citation">[9]</span> whereas online retailer giants like Amazon have seen massive gains <span class="citation">[10]</span>. Additionally, likely due to both lockdown restrictions and safety unease, recreation industries such as sport have also seen major declines with all professional sports leagues taking significant breaks <span class="citation">[11]</span>.
                                 </p>
@@ -149,17 +153,18 @@
 
                 <div class="fbox">
                         <div class="fcols text-fcol">
-                                <h2 class="subtitle">Comparison Across Categories</h2>
+                                <h3 class="subtitle">Comparison Across Categories</h3>
                                 <p>add</p>
                 </div>
                         <div class="fcols vis-col">
-                                <iframe width="100%" height="871" frameborder="0" src="https://observablehq.com/embed/@jyoo980/changes-in-our-mobility-transit?cell=chart&cell=legend&cell=viewof+selectedProv&cell=viewof+range&cell=sliderHeader&cell=viewof+categoryCheckbox"></iframe>
+                                <iframe height="871" frameborder="0" src="https://observablehq.com/embed/@jyoo980/changes-in-our-mobility-transit?cell=chart&cell=legend&cell=viewof+selectedProv&cell=viewof+range&cell=sliderHeader&cell=viewof+categoryCheckbox"></iframe>
                         </div>
                 </div>
 
 
                 <div id=refs>
-                        <h2 class="subtitle">References</h2>
+                        <hr id="title-sep">
+                        <h3 class="subtitle">References</h3>
                         <ol>
                                 <li>our paper</li>
                                 <li>https://idl.cs.washington.edu/papers/surprise-maps/</li>

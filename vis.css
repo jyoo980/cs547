@@ -1,12 +1,15 @@
 
 /* ----- global ----- */
+html {
+        background-color: #EEE;
+}
 
 body {
         background-color: white;
-	margin-left: 150px;
-	margin-right: 150px;
+	margin-left: 175px;
+	margin-right: 175px;
         margin-top: -15px;
-        padding: 0px 20px;
+        padding: 5px 20px;
         border-left: 1px solid #CCC;
         border-right: 1px solid #CCC;
 }
@@ -16,13 +19,11 @@ body {
 #article-title {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 40px;
-        /*margin-left: 20px;*/
 }
 
 #author-box {
 	font-family: "Times New Roman", Times, serif;
 	margin-top: -15px;
-	/*margin-left: 20px;*/
 }
 
 #teaser-img {
@@ -32,27 +33,27 @@ body {
 
 #title-sep {
 	border-top: 1px solid #CCC; /*1px dotted grey;*/
-	/*margin-left: 20px;*/
 }
 
 #date-box {
 	font-family: "Times New Roman", Times, serif;
 	margin-top: -10px;
-	/*margin-left: 20px;*/
 	font-size: 20px;
 }
 
 /* ----- subtitles ----- */
 
 .subtitle {
-        margin-top: 40px;
+}
+
+.title-sep {
+        margin-bottom: 20px;
 }
 
 /* ----- paragraphs ----- */
 
 #intro-par {
-	/*margin-left: 20px;*/
-        margin: 30px 50px 15px 50px;
+        margin: 35px 50px 15px 50px;
 }
 
 .reg-par {
@@ -65,28 +66,32 @@ body {
 }
 
 ul {
-        margin: -20px 0px 30px 50px;
+        margin: -20px 0px 40px 50px;
 }
 
 /* ----- columns ----- */
 
 .fbox {
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         justify-content: space-between;
-        flex-basis: 100%;
-        margin: 10px 0px;
+        align-items: flex-start; /* center will put vis in the middle of block */
+        margin: 20px 0px;
+        width: 100%;
 }
 
 .fcols { /* both types */
-        width: 49%;
+        width: 54%;
 }
 
 .text-fcol {
+        width: 44%;
 }
 
 .vis-fcol {
+}
+
+iframe {
+        width: 100%;
 }
 
 /* ----- references ----- */
