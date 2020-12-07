@@ -4,16 +4,18 @@ body {
 	margin-right: 200px;
 }
 
+/* ----- header section ----- */
+
 #article-title {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 40px;
-  margin-left: 20px;
+        /*margin-left: 20px;*/
 }
 
 #author-box {
 	font-family: "Times New Roman", Times, serif;
 	margin-top: -15px;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 
 #teaser-img {
@@ -23,16 +25,33 @@ body {
 
 #title-sep {
 	border-top: 1px dotted grey;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 
 #date-box {
 	font-family: "Times New Roman", Times, serif;
 	margin-top: -10px;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 	font-size: 20px;
 }
 
+/* ----- subtitles ----- */
+
+.subtitle {
+        margin-top: 40px;
+}
+
+/* ----- paragraphs ----- */
+
 #intro-par {
-	margin-left: 20px;
+	/*margin-left: 20px;*/
+}
+
+.reg-par {
+        margin-bottom: 10px;
+        text-indent: 40px;
+}
+
+.block-quote {
+        margin-left: 50px;
 }

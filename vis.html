@@ -11,37 +11,120 @@
 		<img id="teaser-img" src="./media/heatmap.png" alt="teaser">
 		<hr id="title-sep">
 		<p id="intro-par">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta libero libero, sed malesuada turpis bibendum vitae. 
-		Donec luctus malesuada pellentesque. Aliquam ut mauris a felis condimentum congue pulvinar vel enim. Cras sagittis tellus 
-		at sagittis dignissim. Nulla congue tempor sollicitudin. Duis laoreet pharetra vulputate. In hac habitasse platea dictumst. 
-		Phasellus eget ultricies tellus. Duis mauris mauris, ultricies at elit ut, auctor eleifend ante. Nunc et bibendum eros.
-		Cras sagittis malesuada eros, sit amet placerat est commodo a. Nam consequat eros ut tortor luctus, interdum iaculis ante aliquet.
-		Quisque eu lorem feugiat, volutpat ante quis, vulputate tortor. Donec aliquam ut augue quis auctor. 
-		Donec accumsan euismod eleifend. Aliquam vel lacus purus.
-
-		Donec a tempor velit, sed finibus odio. Nullam ultricies ornare orci, at fermentum nisl aliquet tincidunt. Etiam turpis nulla, 
-		ullamcorper quis porttitor eget, iaculis a libero. Integer eget euismod lacus. Duis enim sapien, dictum ac enim nec, ultrices 
-		dictum justo. Etiam vitae neque nibh. Praesent fringilla eu libero euismod sodales. Etiam posuere neque laoreet libero porttitor 
-		auctor. Duis ultrices sit amet tortor et rhoncus. Ut fermentum lectus nec quam luctus, in pulvinar ex efficitur. Morbi vitae 
-		ullamcorper sapien. Sed non elementum augue, non interdum arcu. Donec lacinia posuere tempus. In vel massa maximus, imperdiet 
-		ligula sed, commodo lectus. Etiam iaculis, diam eget euismod finibus, ligula purus placerat purus, sit amet laoreet magna 
-		est non dui. Nulla at accumsan tortor.
-
-		Curabitur ornare lacus vitae dui laoreet bibendum. Nam non tellus vitae lorem hendrerit ornare vitae at nibh. Nunc sed lacus 
-		porta, pellentesque eros sit amet, eleifend purus. In faucibus nibh est, et lobortis lectus ultricies non. Pellentesque neque 
-		lacus, auctor nec facilisis in, euismod eget nibh. Ut luctus ante enim, ut semper nunc congue sed. Donec in placerat nibh, in 
-		consequat magna. Nullam sit amet ligula tortor. Praesent convallis auctor orci, dignissim volutpat metus luctus ac. Proin ac 
-		iaculis velit, eu luctus turpis. Integer eu euismod erat.
-
-		Nullam molestie pharetra risus, in volutpat metus sagittis fringilla. Cras viverra molestie nibh, non tempus orci consequat vitae. 
-		Quisque ut mauris at felis semper euismod. Pellentesque fermentum, nibh sit amet pellentesque mollis, elit dui commodo massa, 
-		posuere tincidunt sapien felis in velit. Vivamus iaculis metus nec leo imperdiet pretium. Nunc volutpat, sem porttitor eleifend 
-		tempor, lorem libero malesuada lacus, eu viverra arcu nisi euismod neque. Ut elementum non nibh eget laoreet. In mattis, enim 
-		vel interdum mattis, ipsum justo cursus arcu, sed pretium nisl ligula et mi.
-
-		Quisque euismod odio odio, id dictum enim fringilla tristique. Integer tempus consectetur odio. Praesent pretium imperdiet ligula,
-		sed mollis augue molestie a. Nunc quis ligula non nunc porttitor scelerisque a gravida neque. Fusce tempus lectus felis, a 
-		incidunt lacus cursus non. Nullam mattis id nulla non pharetra. Vestibulum efficitur ultrices luctus. In hac habitasse platea dictumst.
+		"The COVID-19 pandemic is without a doubt the largest event in recent memory to have disrupted the lives of billions of people on a global scale. Many across the globe have changed their daily routines: how they work, play, and otherwise spend their time." <span class="citation">[1]</span> While the pandemic is now a constant in daily life, the ways in which society has adapted its mobility is ever-changing, with factors such as seasonality and changes in public policy directly affecting movement.
+                </p>
+                <p class="reg-par">
+                In this interactive explainer article, we will detail changes in mobility in Canada during the COVID-19 pandemic, with emphasis on the province of British Columbia, through a series of visualizations.  "Furthermore, we will not be visualizing or generating any data on how COVID-19 progresses in a region as we are not experts in epidemiology, and presenting data in this space would be unethical." <span class="citation">[1]</span> Instead, our visualizations and data will be centered on six different mobility categories:
+                        <ul>
+                        <li>Retail and Recreation</li>
+                        <li>Grocery and Pharmacy</li>
+                        <li>Parks</li>
+                        <li>Transit Stations</li>
+                        <li>Workplaces</li>
+                        <li>Residential</li>
+                        </ul>
+                </p>
+                <p class="reg-par">
+                The original source for our data is provided by Google's COVID-19 <a href="https://www.google.com/covid19/mobility/">Community Mobility Reports</a>; the data is presented as a percentage change compared against the baseline five-week period of January 3 - February 6, 2020, and begins on February 15, 2020. This data is collected and maintained by Google which frequently updates to include new dates.
+                </p>
+                <p class="reg-par">
+                While the data collected by Google is very thorough, there are dates for which there is no reported mobility. This is because if there is not enough mobility on a specific date to maintain anonymity, Google does not release the information for that date or mobility category. Furthermore, because the data for the baseline is static and collected in January, it doesn’t take into account any expectations we would have for future mobility (ie. seasonality). For example, we will see later that the mobility in the Parks category is more than 200% times the baseline during the summer months. However, this makes sense with our knowledge that people generally don’t go to parks much in the winter since it’s cold, but will go more frequently when the weather is warmer. Furthermore, the data collected for the Residential category is measured as “hours spent” rather than total visitors. Therefore, we will see that there are small changes in Residential mobility since people will generally spend most of the day at home. Lastly, because mobility is reported as a percentage change from a baseline, we cannot draw any conclusions about the total mobility for any category.
+                </p>
+                <p class="reg-par">
+                Moving on to our visualizations, we will present three? unique visualizations as well as some explanations for the data/trends but we leave further exploration to you, the reader.
+                </p>
+                <p class="reg-par">
+                <h2 class="subtitle">Canadian Mobility Choropleth Maps</h2>
+                <p class="reg-par">
+                Our first visualization provides a choropleth map representation of Canadian mobility. From this, we can see per-day differences and similarities across every province and territory. We also provide a play button if you wish to see an animated version of this visualization. With this animated version, we can already start to see some trends emerge in the data.  If you're curious as to the exact values for a province or territory, simply hover over the region of interest and a box will tell you the exact percentage change. Regions, where there is missing data, are represented with a light grey.
+                </p>
+                <p class="reg-par">
+                While choropleth maps can show a lot of information, we should take note of their limitations. For example, what if we see a 50 percent increase above baseline in both British Columbia and Nova Scotia? Does this mean that we should view these results as equally surprising or should we be more surprised that a province with a lower population (like Nova Scotia) has the same percentage increase in mobility as a province with a larger population (British Columbia)? To answer this question, we present a Surprise Map visualization for the mobility data to show if there are any anomalies in interprovincial mobility.
+                </p>
+                <p class="reg-par">
+                Surprise Maps were originally introduced by Michael Correll and Jeffrey Heer as an alternative to standard choropleth maps <span class="citation">[2]</span> and allow us to see if there are any anomalies or points of interest that we should explicitly focus on.  In this visualization, we present the mobility data as a signed surprise value rather than a percentage change in mobility. The signed surprise shows if the value of mobility that we see is above or below the expected amount. Two prior models determine the expectation. The first model assumes that the mobility between provinces should be approximately the same. The second model assumes that the mobility in each province for each category should be approximately zero with the variance inversely proportional to the population for each category. Again, any dates where there is missing data are shown in a light grey.
+                </p>
+                <p class="reg-par">
+                One point in time to focus on are the summer months of July and August for the Parks mobility category. If we look at just the percentage change in mobility, we can see that mobility in almost all provinces is much higher than the baseline. However, when we look at the surprise map for the corresponding dates we can see that only the mobility for some provinces is actually higher or lower than expected when comparing between provinces.
 		</p>
+                <h2 class="subtitle">Changes in our mobility – Transit</h2>
+                </p>
+                <p class="reg-par">
+                Public transit is an invaluable part of the lives of many people across Canada. In British Columbia alone, there were a total of 453 million public transit boardings in 2019. This is an increase from 363 million boardings in 2015. The designation of the busiest bus line in North America belongs to the 99-B Line <span class="citation">[3]</span>.
+The COVID-19 pandemic has led to restrictions on workplaces and social gatherings. Naturally, people are no longer travelling at the same levels they were before the pandemic. For example:
+                        <p class="block-quote">"Close to half of bus riders have not returned to transit as TransLink resumed full services this past summer after limiting them in the early days of COVID-19." <span class="citation">[4]</span></p>
+                and this is corroborated by the visualization we present below. This pattern is also not something that is local to British Columbia or one Canadian province or territory. Based on available data from February 14, 2020 to December 1, 2020, it is clear that most regions of Canada have not returned to the levels of travel observed before the pandemic.
+                </p>
+                <p class="reg-par">
+< INSERT JAMES’S VIS ON TRANSPORTATION >
+                One may surmise from the visualization above that people are definitely not travelling as much as they used to. An interesting observation is that although regions were under heavier travel restrictions at different times, the general pattern of decreased transit mobility appears to be common among them.
+It is also interesting to observe the almost immediate drop-off in transit mobility in mid-March. This is explained by the imposition of harsher travel restrictions after the WHO declared COVID-19 outbreak a pandemic <span class="citation">[5]</span>.
+                </p>
+
+                <h2 class="subtitle">Changes in our mobility – Workplace</h2>
+                The workplace has undergone a number of transformative changes over recent years. From cubicles to open-office concepts, the modern workplace is, for better or for worse, the place where most people spend the majority of their waking hours. With the introduction of public health measures to curb the spread of COVID-19, many workplaces have “gone virtual.” This means that many people who would otherwise be commuting to the office for work are instead telecommuting where applicable. In the visualization below, one can clearly see the sharp dropoff around mid-March when COVID-19 restrictions around Canada were introduced.
+                </p>
+                <p class="reg-par">
+                < INSERT JAMES’S VIS ON TRANSPORTATION >
+                Statistics Canada reported earlier this year that nearly one-third (32.6%) of businesses had 10% or more of their workforce were working remotely on May 29, 2020 <span class="citation">[6]</span>. The troughs in the previous visualization can be explained by workplace mobility understandably dropping toward the weekend. Major drops are explained by regional/nation-wide holidays such as Family Day or Canada Day.
+Looking beyond the direct impacts of COVID-19, it is interesting to consider the future implications that this pandemic has had, and continues to have on the future of work. Statistics Canada also reported that close to one-quarter (22.5%) of businesses expect that 10% or more of their workforce will continue to telework or work remotely <span class="citation">[6]</span>.
+                </p>
+
+
+                <h2 class="subtitle">Changes in our mobility – Residential</h2>
+                <p class="reg-par">
+                With a drastic change in mobility trends related to workplaces comes an important question: where do people spend their waking hours if not at the workplace? Unfortunately, a global pandemic of a deadly virus is not conducive to travel. As a consequence, many people are now spending more time than ever at home. The visualization below illustrates how mobility trends in residential areas have changed across the course of the pandemic.
+                </p>
+                <p class="reg-par">
+                < INSERT JAMES’ VIS ON RESIDENTIAL >
+                An interesting observation to note is that this mobility category is one that demonstrates a trend in a positive direction. Since fewer people are commuting to work, attending social gatherings, and in general, leaving their homes less, we see that there is an increase in mobility for the residential category. 
+                </p>
+
+                <h2 class="subtitle">Changes in our mobility - Parks</h2>
+                <p class="reg-par">
+                With most citizens being predominantly homebound since the pandemic began, many are looking for activities to both socialize and remain active in a safe manner. Weather-permitting, parks and outdoor spaces have become a hotspot for meeting friends at an acceptable distance, exercising, and taking a break from the new normal of home which now often includes work, school, and leisure.
+                </p>
+                <p class="reg-par">
+                In fact, CBC News recently reported that regional park use in Metro Vancouver has increased to 14.4 million visits by the end of October, a 37% change from the recent averages of 11 to 12 million per year <span class="citation">[7]</span>. A recent survey by Park People, an independent charity for building community through parks, found that 70% of the 1600 residents they surveyed across the country had an increased appreciation of parks and green spaces since the COVID-19 pandemic began. The respondents cited mental health, physical health, connection to nature, and social connection, as top reasons for this appreciation; the latter was found to be particularly high for those who live alone. <span class="citation">[8]</span>
+                </p>
+                <p class="reg-par">
+                These patterns appear to extend to our visualization below which shows large increases in park attendance from baseline for both British Columbia and Canada overall. However, in the national view, we note that the variation is less extreme. We partially attribute this variance to the decreased viability of visiting parks in the winter in many provinces and territories in Canada due to weather. As noted by Google, readers are reminded that park attendance will naturally increase in the warmer months, so some positive change from the baseline taken in January and February is expected.
+                </p>
+
+                <h2 class="subtitle">Changes in our mobility - Retail & Recreation and Grocery & Pharmacy</h2>
+                </p>
+                <p class="reg-par">
+                Due to lockdown measures and general safety concerns, retail industries have seen a significant change in traffic during the pandemic. With most people spending more of their time at home, e-commerce, socially-distanced curbside pick-up, and local delivery have become immensely popular in comparison to standard storefronts. Many retail chains which rely on physical stores have gone bankrupt or converted to online-only storefronts in record numbers <span class="citation">[9]</span> whereas online retailer giants like Amazon have seen massive gains <span class="citation">[10]</span>. Additionally, likely due to both lockdown restrictions and safety unease, recreation industries such as sport have also seen major declines with all professional sports leagues taking significant breaks <span class="citation">[11]</span>.
+                </p>
+                <p class="reg-par">
+                Experts at KPMG, a multinational accounting and professional services network, discuss how many retailers have seen a sharp decline in “physical footfall” at brick-and-mortar stores and malls during the pandemic and, during strict lockdowns, a complete closure of these locations. However, in contrast, they note that other essential retailers, such as grocery stores, have had an inverse trend and dealt with low stock due to stock-piling and sourcing issues. <span class="citation">[12]</span>
+                </p>
+                <p class="reg-par">
+                Interestingly, our visualization may reflect this suggested trend of stock-piling goods where consumers appear to have visited grocery and pharmacy locations more than average in the few days before British Columbia implemented lockdown measures in mid to late March. We also see sharp, consistent decreases in retail and recreation mobility across Canada.
+                </p>
+                <p class="reg-par">
+                Overall, we see a common theme of experts suggesting that the pandemic will permanently shift the way we shop.
+                </p>
+
+<INSERT LILY’S CALENDAR VIS WITH NO PRESELECTION?>
+
+<h2 class="subtitle">Changes in our mobility – Categorical Comparison</h2>
+
 	</body>
+        <div id=refs>
+                <ol>
+                <li>our paper</li>
+                <li>https://idl.cs.washington.edu/papers/surprise-maps/</li>
+                <li>https://web.archive.org/web/20200113053911/https://www.translink.ca/Plans-and-Projects/Rapid-Transit-Projects/SkyTrain-to-UBC.aspx</li>
+                <li>******JAMES' MISSING REFERENCE******</li>
+                <li>https://www.statnews.com/2020/03/11/who-declares-the-coronavirus-outbreak-a-pandemic/</li>
+                <li>https://www150.statcan.gc.ca/n1/daily-quotidien/200714/dq200714a-eng.htm?CMP=mstatcan</li>
+                <li>https://www.cbc.ca/news/canada/british-columbia/codd-wetland-new-land-1.5795530</li>
+                <li>https://parkpeople.ca/2020/07/16/covid-19-and-parks-highlights-from-our-national-surveys/</li>
+                <li>https://www.styledemocracy.com/canadian-bankruptcies-store-closures-in-2020/</li>
+                <li>https://www.forbes.com/sites/sergeiklebnikov/2020/07/23/5-big-numbers-that-show-amazons-explosive-growth-during-the-coronavirus-pandemic/?sh=b53873441376</li>
+                <li>https://torontosun.com/news/national/reopening-canada/reopening-canada-pro-sports-precarious-covid-comeback</li>
+                <li>https://home.kpmg/xx/en/home/insights/2020/03/realities-of-retailing-in-covid-19-world.html</li>
+                </ol>
+        </div>
 </html>
