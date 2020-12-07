@@ -6,7 +6,7 @@ body {
 	margin-left: 150px;
 	margin-right: 150px;
         margin-top: -15px;
-        padding: 0px 10px;
+        padding: 0px 20px;
         border-left: 1px solid #CCC;
         border-right: 1px solid #CCC;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 #title-sep {
-	border-top: 1px dotted grey;
+	border-top: 1px solid #CCC; /*1px dotted grey;*/
 	/*margin-left: 20px;*/
 }
 
@@ -52,12 +52,11 @@ body {
 
 #intro-par {
 	/*margin-left: 20px;*/
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin: 30px 50px 15px 50px;
 }
 
 .reg-par {
-        margin-bottom: 10px;
+        margin-bottom: 40px;
         text-indent: 40px;
 }
 
@@ -65,15 +64,19 @@ body {
         margin-left: 50px;
 }
 
+ul {
+        margin: -20px 0px 30px 50px;
+}
+
 /* ----- columns ----- */
 
 .fbox {
         display: flex;
-        /*flex-direction: row;*/
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         flex-basis: 100%;
+        margin: 10px 0px;
 }
 
 .fcols { /* both types */
@@ -86,11 +89,14 @@ body {
 .vis-fcol {
 }
 
-/* footer */
+/* ----- references ----- */
 
 #refs {
-        /*width: 100%;*/
+}
 
+.citation {
+        font-size: x-small;
+        vertical-align: super;
 }
 
 
