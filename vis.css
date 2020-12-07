@@ -1,7 +1,14 @@
+
+/* ----- global ----- */
+
 body {
-  background-color: white;
-	margin-left: 200px;
-	margin-right: 200px;
+        background-color: white;
+	margin-left: 150px;
+	margin-right: 150px;
+        margin-top: -15px;
+        padding: 0px 10px;
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #CCC;
 }
 
 /* ----- header section ----- */
@@ -45,6 +52,8 @@ body {
 
 #intro-par {
 	/*margin-left: 20px;*/
+        margin-top: 30px;
+        margin-bottom: 30px;
 }
 
 .reg-par {
@@ -55,3 +64,34 @@ body {
 .block-quote {
         margin-left: 50px;
 }
+
+/* ----- columns ----- */
+
+.fbox {
+        display: flex;
+        /*flex-direction: row;*/
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 100%;
+}
+
+.fcols { /* both types */
+        width: 49%;
+}
+
+.text-fcol {
+}
+
+.vis-fcol {
+}
+
+/* footer */
+
+#refs {
+        /*width: 100%;*/
+
+}
+
+
+
