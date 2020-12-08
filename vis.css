@@ -75,7 +75,7 @@ ul {
 .fbox {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start; /* center will put vis in the middle of block */
+        align-items: flex-start; /*center will put vis in the middle of block */
         margin: 20px 0px;
         width: 100%;
 }
@@ -86,9 +86,11 @@ ul {
 
 .text-fcol {
         width: 44%;
+        /*align-self: flex-start;*/
 }
 
 .vis-fcol {
+        /*align-self: center;*/
 }
 
 iframe {
