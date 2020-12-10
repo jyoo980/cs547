@@ -32,7 +32,7 @@ body {
 }
 
 #title-sep {
-	border-top: 1px solid #CCC; /*1px dotted grey;*/
+	border-top: 1px solid #CCC;
 }
 
 #date-box {
@@ -95,6 +95,10 @@ ul {
 
 iframe {
         width: 100%;
+}
+
+#combo-vis {
+        align-self: center;
 }
 
 /* ----- references ----- */
