@@ -1,0 +1,115 @@
+
+/* ----- global ----- */
+html {
+        background-color: #EEE;
+}
+
+body {
+        background-color: white;
+	margin-left: 175px;
+	margin-right: 175px;
+        margin-top: -15px;
+        padding: 5px 20px;
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #CCC;
+}
+
+/* ----- header section ----- */
+
+#article-title {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 40px;
+}
+
+#author-box {
+	font-family: "Times New Roman", Times, serif;
+	margin-top: -15px;
+}
+
+#teaser-img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#title-sep {
+	border-top: 1px solid #CCC;
+}
+
+#date-box {
+	font-family: "Times New Roman", Times, serif;
+	margin-top: -10px;
+	font-size: 20px;
+}
+
+/* ----- subtitles ----- */
+
+.subtitle {
+}
+
+.title-sep {
+        margin-bottom: 20px;
+}
+
+/* ----- paragraphs ----- */
+
+#intro-par {
+        margin: 35px 50px 15px 50px;
+}
+
+.reg-par {
+        margin-bottom: 40px;
+        text-indent: 40px;
+}
+
+.block-quote {
+        margin-left: 50px;
+        margin-bottom: 40px;
+}
+
+ul {
+        margin: -20px 0px 40px 50px;
+}
+
+/* ----- columns ----- */
+
+.fbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /*center will put vis in the middle of block */
+        margin: 20px 0px;
+        width: 100%;
+}
+
+.fcols { /* both types */
+        width: 54%;
+}
+
+.text-fcol {
+        width: 44%;
+        /*align-self: flex-start;*/
+}
+
+.vis-fcol {
+        /*align-self: center;*/
+}
+
+iframe {
+        width: 100%;
+}
+
+#combo-vis {
+        align-self: center;
+}
+
+/* ----- references ----- */
+
+#refs {
+}
+
+.citation {
+        font-size: x-small;
+        vertical-align: super;
+}
+
+
+
